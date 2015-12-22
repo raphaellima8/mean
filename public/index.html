@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="api">
   <head>
     <meta charset="utf-8">
     <title>Bem-vindo</title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.css">
   </head>
-  <body>
-      <h1>Bem-vindo a API</h1>
+  <body class="container">
+  	<div ng-view></div>
+
+      <script src="vendor/angular/angular.js"></script>
+      <script src="vendor/angular-route/angular-route.js"></script>
+      <script src="vendor/angular-resource/angular-resource.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/controllers/ContatosController.js"></script>
+      <script src="js/controllers/ContatoController.js"></script>
   </body>
 </html>
