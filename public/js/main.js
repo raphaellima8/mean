@@ -15,6 +15,6 @@ angular.module('api', ['ngRoute', 'ngResource'])
 			templateUrl: 'partials/contato.html',
 			controller: 'ContatoController'
 		});
-		
+
 		$routeProvider.otherwise({redirectTo: '/contatos'});
 	});
