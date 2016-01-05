@@ -12,7 +12,7 @@ module.exports = function(app){
 		res.redirect('/');
 	})
 
-	app.get('/contato', function(req, res, next){
+	app.get('/login', function(req, res, next){
 		if(req.isAuthenticated()){
 			return next();
 		} else {
