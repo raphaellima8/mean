@@ -1,5 +1,5 @@
 angular.module('api').controller('ContatoController', 
-	function($scope, $routeParams, Contato){
+	function($scope, Contato, $routeParams){
 		
 		if($routeParams.contatoId){
 			Contato.get({id: $routeParams.contatoId}, 
@@ -10,7 +10,6 @@ angular.module('api').controller('ContatoController',
 					$scope.mensagem = {
 						texto: 'Não foi possível obter o contato.'
 					};
-				console.log(erro);
 				}
 			);
 		} else{
@@ -25,10 +24,10 @@ angular.module('api').controller('ContatoController',
 				})
 				.catch(function(erro){
 					$scope.mensagem = {texto: 'Não foi possível salvar'};
-				})
+				});
 		};
 
 		Contato.query(function(contatos){
 			$scope.contatos = contatos;
-		})
+		});
 	});

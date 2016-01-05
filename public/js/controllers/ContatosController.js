@@ -1,5 +1,5 @@
 angular.module('api').controller('ContatosController', 
-	function($scope, Contato){
+	function(Contato, $scope){
 
 		$scope.contatos = [];
 
