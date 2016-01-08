@@ -1,4 +1,4 @@
-angular.module('api', ['ngRoute', 'ngResource'])
+angular.module('api', ['ngRoute', 'ngResource', 'meusComponentes'])
 	.config(function($routeProvider) {
 
 		$routeProvider.when('/contatos', {
