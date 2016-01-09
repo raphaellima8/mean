@@ -35,5 +35,11 @@ angular.module('meusComponentes', [])
 		directive.scope = {
 			focus: '='
 		};
+		
+		directive.link = function(scope, element){
+			scope.$on(scope.evento, function(){
+				element[0].focus();
+			});
+		};
 		return directive;
 	})
