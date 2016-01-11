@@ -2,7 +2,7 @@ language: node_js
 notifications:
   email: raphael.aolima8@gmail.com
 node_js:
-- 0.1
+- 0.10
 services:
 - mongodb
 env:
@@ -34,8 +34,8 @@ deploy:
   provider: openshift
   user: raphael.aolima8@gmail.com
   password:
-    secure: B7V7ix3B4N4tq5oKJcnvT5W3AuglLrYW7rO1UbGB1cL5HQr+NQRkrMkdSRf35yL4c+FQ1dey4ls/IDOd4Q20BeXP9+IAH6O+3npurYR78rVTULvaafTmHwYG5L40OZU+ZSdQMszHlPTPiDO5A/GbxqheSb25oGvFbE9H3v79RPHBTinwQeqeV6fjGJ2srYBgtY22f8qrrxhAITC+u4cquKMVxFGPV97aXfEYb2RM/oNaHzlcBtDYhOI2bNOwvqayF++yC+Ixf/heJlf3kpp533VDEEYdUoEuhXISOdOVgE2UlEcgCuLW/s3i50ZbiKfTbczwCJ9E/D3GfqesPlaOZQ5kLU4IE8SGfch/M4UPq+AlCNaW1af8ggcMEX43yenbcMtYSZ9FEfucmZwtD7x8xrnCUPYfEE0tHD+vZD9nOe5IY20PwAcyxEi//NkKcuS+2c9w/IQpk4PONZ5O291RKxp2m3TU6GivCmE5guZo5byx7NHuwy3PTGoPbsAHARKPcsg+YNx98e3ytJh/hJVNfjJM7Im5ahsIumdV5Xcq5VonZ4KV0o1Ka94mQuUI+eTbp/ScMkowSg07sIzTxIuFYwcHUUJoNyDXBzJ//rvnaim1aB0ypi00bL4WR3K7sJje2+uABa4qHp9+uQdsWk+ufOmUq1WW9ZnwGKsIqKdRUEM=
+    secure: W8c9m0iuuQ/2wTcAPi49NwgSWiGu1xMs5oNYhVUWR0tO3GWcxabNL6iEtEL9DkWConyS7gtB16v4FgF+qeKy58qbgSltdTnzHWx/c9ENUkAxTl2wP0CHaim2eiLlN3MDvE4NZb6DyWAXHEGKwHrXjUMlKIucYLjpioAsenaCuycF5R6QegGf3WmbZVhKmNGA4QThueAv69HZV16cx6KK2AQnePKKXMDP5ny5iXAJ4vaRRHjlPL3byWdUH4JFRutewAQclP0rqAoAt1Ifxti6Ye/u9R6Gx57LWOZYMvdXEq4SEGABYobyi8vMBGWQrlbzs3SftCOBCz1BbBgFKOYsQYmJYJN+fK3Z1uECTbNWyRkCZgAucGuhWxPXFGDrsJDqv7plF158INTFl8H6rlIBdRo0rrCJpEox8bELfoV2r/TSvw60DUPdJrLf2zJt4fYH3onRsLxeyq+X9ao3Y7rXbqefneN7L2AVTZqsmhM6QlZpiYKLdBCErSC3aZmiqB0BfPMAdIOAJSHVr7MaVZ7SFmMr9AFZgaj4sBu8GhbZyJ10OcplKqoSGNfYS9mtG9uKE/D+zlDVFQ9QuT+La+farW7K7ZUqPfxar+YMWgvMLGIJQiKhdGlpFJh9qAr68TRgI0Yv3/OYRS3xZ992+dJwF5ekx8stO4HK11PRJjFhSoY=
   app: mean
-  domain: http://mean-raphaellima.rhcloud.com/
+  domain: raphaellima
   on:
     repo: raphaellima8/mean
