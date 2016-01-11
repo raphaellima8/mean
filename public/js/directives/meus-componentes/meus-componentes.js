@@ -33,13 +33,13 @@ angular.module('meusComponentes', [])
 		directive.restrict = 'A';
 
 		directive.scope = {
-			focus: '='
+			focus: '=focus'
 		};
 		
 		directive.link = function(scope, element){
 			scope.$on(scope.evento, function(){
-				element[0].focus();
+					element[0].focus();
 			});
 		};
 		return directive;
-	})
+	});
