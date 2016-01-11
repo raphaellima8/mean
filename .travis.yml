@@ -17,6 +17,12 @@ before_install:
 - npm install -g protractor@1.5
 - webdriver-manager update
 - bower install
+before_deploy:
+- git config --global user.email "travis@travis-ci.com"
+- git config --global user.name "Travis CI"
+- git checkout $TRAVIS_BRANCH
+- git add .
+- git commit -m "Travis commit"
 before_scrpit:
 - node test/data.js
 - grunt minifica
