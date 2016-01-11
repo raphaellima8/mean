@@ -1,6 +1,6 @@
 module.exports = {
 	env: 'test',
-	db: 'mongodb://localhost/api-node-test',
+	db: 'mongodb://localhost/mean-test',
 	sauceTestName: 'MEAN E2E Testing',
 	sauceUser: process.env.SAUCE_USERNAME,
 	sauceKey: process.env.SAUCE_ACCESS_KEY,

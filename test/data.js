@@ -5,7 +5,7 @@ var contatos = [
 	{nome: "xyz3", email: "xyz3@email.com.br"},
 ];
 
-MongoClient.connect('mongodb://localhost:27017/api-node-test', function(erro, db){
+MongoClient.connect('mongodb://localhost:27017/mean-test', function(erro, db){
 	if(erro) throw err;
 
 	db.dropDatabase(function(err){
