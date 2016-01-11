@@ -2,26 +2,40 @@ language: node_js
 notifications:
   email: raphael.aolima8@gmail.com
 node_js:
-  - 0.10
+- 0.1
 services:
-  - mongodb
+- mongodb
 env:
   global:
-    - NODE_ENV: test
+  - NODE_ENV: test
 addons:
   sauce_connect: true
 before_install:
-  - npm install -g bower@1.3
-  - npm install -g grunt-cli@0.1
-  - npm install -g karma-cli@0.0
-  - npm install -g protractor@1.5
-  - webdriver-manager update
-  - bower install
+- npm install -g bower@1.3
+- npm install -g grunt-cli@0.1
+- npm install -g karma-cli@0.0
+- npm install -g protractor@1.5
+- webdriver-manager update
+- bower install
 before_scrpit:
-  - node test/data.js
-  - grunt
-  - cd dist
+- node test/data.js
+- grunt minifica
 script:
-  - karma start config/karma.config.js --single-run --browsers PhantomJS
-  - node server &
-  - protractor config/protractor.js
+- karma start config/karma.config.js --single-run --browsers PhantomJS
+- node server &
+- protractor config/protractor.js
+deploy:
+  provider: openshift
+  user: raphael.aolima8@gmail.com
+  password:
+    secure: B7V7ix3B4N4tq5oKJcnvT5W3AuglLrYW7rO1UbGB1cL5HQr+NQRkrMkdSRf35yL4c+FQ1dey4ls/IDOd4Q20BeXP9+IAH6O+3npurYR78rVTULvaafTmHwYG5L40OZU+ZSdQMszHlPTPiDO5A/GbxqheSb25oGvFbE9H3v79RPHBTinwQeqeV6fjGJ2srYBgtY22f8qrrxhAITC+u4cquKMVxFGPV97aXfEYb2RM/oNaHzlcBtDYhOI2bNOwvqayF++yC+Ixf/heJlf3kpp533VDEEYdUoEuhXISOdOVgE2UlEcgCuLW/s3i50ZbiKfTbczwCJ9E/D3GfqesPlaOZQ5kLU4IE8SGfch/M4UPq+AlCNaW1af8ggcMEX43yenbcMtYSZ9FEfucmZwtD7x8xrnCUPYfEE0tHD+vZD9nOe5IY20PwAcyxEi//NkKcuS+2c9w/IQpk4PONZ5O291RKxp2m3TU6GivCmE5guZo5byx7NHuwy3PTGoPbsAHARKPcsg+YNx98e3ytJh/hJVNfjJM7Im5ahsIumdV5Xcq5VonZ4KV0o1Ka94mQuUI+eTbp/ScMkowSg07sIzTxIuFYwcHUUJoNyDXBzJ//rvnaim1aB0ypi00bL4WR3K7sJje2+uABa4qHp9+uQdsWk+ufOmUq1WW9ZnwGKsIqKdRUEM=
+  app: mean
+  domain: http://mean-raphaellima.rhcloud.com/
+  on:
+    repo: raphaellima8/mean
+before_deploy:
+  - git config --global user.email 'travis@travis-ci.com'
+  - git config --global user.name 'Travis CI'
+  - git checkout $TRAVIS_BRANCH
+  - git add --all
+  - git commit -am "Travis commit"
