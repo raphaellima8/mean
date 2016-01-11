@@ -23,7 +23,7 @@ before_deploy:
 - git checkout $TRAVIS_BRANCH
 - git add .
 - git commit -m "Travis commit"
-before_scrpit:
+before_script:
 - node test/data.js
 - grunt minifica
 script:
