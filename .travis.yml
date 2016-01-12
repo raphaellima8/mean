@@ -28,7 +28,7 @@ before_script:
 - grunt minifica
 script:
 - karma start config/karma.config.js --single-run --browsers PhantomJS
-- node server.js &
+- node server &
 - protractor config/protractor.js
 deploy:
   provider: openshift
