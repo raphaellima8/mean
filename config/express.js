@@ -10,7 +10,7 @@ var helmet = require('helmet');
 module.exports = function(){
   var app = express();
 
-  app.set('port', 80);
+  app.set('port', 3000);
 
   //Setando a template engine
   app.set('view engine', 'ejs');
