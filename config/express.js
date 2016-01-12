@@ -10,7 +10,7 @@ var helmet = require('helmet');
 module.exports = function(){
   var app = express();
 
-  app.set('port', process.env.OPENSHIFT_NODEJS_PORT);
+  app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
 
   //Setando a template engine
   app.set('view engine', 'ejs');
