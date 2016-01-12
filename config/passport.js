@@ -3,7 +3,7 @@ var passport = require('passport');
 var GitHubStrategy = require('passport-github').Strategy;
 var findOrCreate = require('mongoose-findorcreate');
 var mongoose = require('mongoose');
-var githubCallback = 'http://' + config.domain + ':' + config.port + '/auth/github/callback';
+var githubCallback = 'http://' + config.domain + '/auth/github/callback';
 
 module.exports = function(){
 
