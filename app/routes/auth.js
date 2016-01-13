@@ -3,7 +3,7 @@ var passport = require('passport');
 module.exports = function(app){
 
 	app.get('/auth/github', passport.authenticate('github'));
-	app.get('/', passport.authenticate('github', {
+	app.get('/callback', passport.authenticate('github', {
 		successRedirect: '/'
 	}));
 
