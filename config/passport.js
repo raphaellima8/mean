@@ -11,8 +11,7 @@ module.exports = function(){
 
 	passport.use(new GitHubStrategy({
 		clientID: config.clientID,
-		clientSecret: config.clientSecret,
-		callbackURL: githubCallback
+		clientSecret: config.clientSecret
 	}, function(accessToken, refreshToken, profile, done){
 		Usuario.findOrCreate(
 			{"login" : profile.username},
