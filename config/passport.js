@@ -31,8 +31,8 @@ module.exports = function(){
 	}));
 
 	passport.use(new GoogleStrategy({
-		clientID:config.clientIDGoogle,
-		clientSecret: config.clientSecretGoogle,
+		clientID:config.clientID,
+		clientSecret: config.clientSecret,
 		callbackURL: googleCallback
 	}, function(accessToken, refreshToken, profile, done){
 		Usuario.findOrCreate(
