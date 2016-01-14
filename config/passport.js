@@ -4,8 +4,8 @@ var GitHubStrategy = require('passport-github').Strategy;
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var findOrCreate = require('mongoose-findorcreate');
 var mongoose = require('mongoose');
-var githubCallback = 'http://' + config.domain + ':' + config.port + '/callback';
-var googleCallback = 'http://localhost:3000/auth/google/callback';
+var githubCallback = 'http://' + config.domain + ':' + config.port + '/callback/';
+var googleCallback = 'http://' + config.domain + ':' + config.port + '/auth/google/callback/';
 
 module.exports = function(){
 
@@ -33,7 +33,7 @@ module.exports = function(){
 	passport.use(new GoogleStrategy({
 		clientID:config.clientIDGoogle,
 		clientSecret: config.clientSecretGoogle,
-		callbackURL: 'http://localhost:3000/auth/google/callback/'
+		callbackURL: googleCallback
 	}, function(accessToken, refreshToken, profile, done){
 		Usuario.findOrCreate(
 			{"login" : profile.displayName},
