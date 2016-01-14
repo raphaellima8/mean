@@ -1,4 +1,5 @@
 var passport = require('passport');
+var passportGoogle = require('passport-google');
 
 module.exports = function(app){
 
@@ -18,5 +19,12 @@ module.exports = function(app){
 		} else {
 			res.render('auth');
 		}
-	})
+	});
+
+	app.get('/auth/google', passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/userinfo.email']}));
+	app.get('/auth/google/callback', passport.authenticate('google', {failureRedirect: '/login'}),
+		function(req, res){
+			res.redirect('/');
+		}
+	);
 }
