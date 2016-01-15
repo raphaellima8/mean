@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var findOrCreate = require('mongoose-findorcreate');
+var bcrypt = require('bcrypt');
 
 module.exports = function(){
 	var schema = mongoose.Schema({
@@ -10,9 +11,12 @@ module.exports = function(){
 				unique: true
 			}
 		},
-		nome: {
+		email: {
 			type: String,
 			required: true,
+			index: {
+				unique: true
+			}
 		},
 		inclusao: {
 			type: Date,
