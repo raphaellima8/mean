@@ -21,16 +21,14 @@ module.exports = function(app){
 		}
 	});
 
-	app.get('/auth/google/', passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.me',
-		'https://www.googleapis.com/auth/plus.login']}));
-	app.get('/auth/google/callback/', passport.authenticate('google', 
+	app.get('/auth/google/', passport.authorize('google', { scope: ['profile','email']}));
+	app.get('/auth/google/callback/', passport.authorize('google', 
 		{
 			successRedirect: '/',
 			failureRedirect: '/login'
 		})
 	);
-	app.get('/google/link', passport.authorize('google', { scope: ['https://www.googleapis.com/auth/plus.me',
-		'https://www.googleapis.com/auth/plus.login']}));
+	app.get('/google/link', passport.authorize('google', { scope: ['profile','email']}));
 	app.get('/google/link/callback', passport.authorize('google', 
 		{
 			successRedirect: '/',
