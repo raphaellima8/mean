@@ -23,7 +23,15 @@ module.exports = function(app){
 
 	app.get('/auth/google/', passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.me',
 		'https://www.googleapis.com/auth/plus.login']}));
-	app.get('/auth/google/callback/', passport.authorize('google', 
+	app.get('/auth/google/callback/', passport.authenticate('google', 
+		{
+			successRedirect: '/',
+			failureRedirect: '/login'
+		})
+	);
+	app.get('/google/link', passport.authorize('google', { scope: ['https://www.googleapis.com/auth/plus.me',
+		'https://www.googleapis.com/auth/plus.login']}));
+	app.get('/google/link/callback', passport.authorize('google', 
 		{
 			successRedirect: '/',
 			failureRedirect: '/login'
