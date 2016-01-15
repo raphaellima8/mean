@@ -21,7 +21,6 @@ module.exports = function(){
   app.use(bodyParser.urlencoded({extended: true}));
   app.use(bodyParser.json());
   app.use(require('method-override')());
-  app.use(require('connect-flash')());
 
   //Parser do header de cookies da requisição populando req.cookies e armazena ID da sesão
   app.use(cookieParser());

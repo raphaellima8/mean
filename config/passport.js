@@ -2,7 +2,6 @@ var config = require('./config')();
 var passport = require('passport');
 var GitHubStrategy = require('passport-github').Strategy;
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-var LocalStrategy = require('passport-local').Strategy;
 var findOrCreate = require('mongoose-findorcreate');
 var mongoose = require('mongoose');
 var githubCallback = 'http://' + config.domain + ':' + config.port + '/callback/';
