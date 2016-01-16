@@ -15,7 +15,7 @@ module.exports = function(app){
 
 	app.get('/login', function(req, res, next){
 		if(req.isAuthenticated()){
-			return next();
+			res.redirect('/');
 		} else {
 			res.render('auth');
 		}

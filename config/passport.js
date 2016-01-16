@@ -5,7 +5,7 @@ var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var findOrCreate = require('mongoose-findorcreate');
 var mongoose = require('mongoose');
 var githubCallback = 'http://' + config.domain + ':' + config.port + '/callback/';
-var googleCallback = 'http://' + config.domain +'/auth/google/callback/';
+var googleCallback = 'http://' + config.domain + ':' + config.port + '/auth/google/callback/';
 
 module.exports = function(){
 

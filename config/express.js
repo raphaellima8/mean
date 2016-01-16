@@ -47,6 +47,7 @@ module.exports = function(){
       .then('controllers')
       .then('routes/auth.js')
       .then('routes')
+      .then('services')
       .into(app);
 
   app.get('*', function(req, res){
