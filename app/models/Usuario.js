@@ -11,7 +11,7 @@ module.exports = function(){
 				unique: true
 			}
 		},
-		email: {
+		nome: {
 			type: String,
 			required: true,
 			index: {
