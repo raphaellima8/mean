@@ -21,8 +21,7 @@ before_deploy:
 - git config --global user.email "travis@travis-ci.com"
 - git config --global user.name "Travis CI"
 - git checkout $TRAVIS_BRANCH
-- git add .
-- git commit -m "Travis commit"
+- git commit -am "Travis commit"
 before_script:
 - node test/data.js
 - grunt minifica
@@ -34,7 +33,7 @@ deploy:
   provider: openshift
   user: raphael.aolima8@gmail.com
   password:
-    secure: qwT7lpWqhJBpvi+XAFTaqPoEltSMT0CEBzLuP+8cLJaxcwHNqDiakv7UYfWTV0EsuN4S2DWhRxkRkcgaERqh1plH5fHIvf4dswI9WJh0T8pp1Xi6guXVQbi51Jg4V8zmimHRkOD+/sjEdyuLmz2RPTGQxTRFWdZcKHOKxmQ84NRAiK05ew/hx+vRoeAduF1K8PuP2/KKrev8TdyIrdXi4CocoIgJSnfd5DoNc8AaytA3b+2i8fy2KQJTIV2iLRIuquLCbOpON7cgJFdJ/bgzTJ9RLobORntZkfjzw+ShKMZ38n3fFhE7//EB9F6Je5hDAqaH5UDQBYvy5nbyllPKTggAfv/z9a2tUXTX7Vn0sdzjno9+k9R3yY12c0QTpIO0DZT3PLX4k5Gu1p7+N802X5cgG3/ThbEwZM/+9FA2GfPSry8Db2oquaVm/PUUp7b3gVJM+/0nRiYpRFLdkhfTEeAgktISpdiMhAta2rfKEIOveMiV2Q0HWgHw1V+CTtauAK65PR0gGp+IpGY1D2YJncv3z6oowElT2cNV9PhcEnBqXHjGB+3LWErOxe8uIOGuGl55ak+YONbKtfmz4Oe21/lGBGbTg+Zjh+49SGBDJz1MaLsBv9XXQ2nuJDdFfq+gEmNE0cEdsgk8glQdoYaLLWOMTXYJWYNdkn+4jTqSOS8=
+    secure: YScmTI6R1X+QeohlHEqesoDXVz8agpzwnsqOAWtcAtX7Gw+/aGAWQKxQpfhlpgkGMALR7wRgqqpCnPwJqUS5YMhhUb9RCQmW8K5ozJiuzELODtqWI+295f3+ZAkk+ufvep4NUSXyS+DQxjEJUIKNxpMVjGQ5fjSN/Z4WUsBfNGM77/JdA/7lSE/+OSzlzT3Trn2lAUKVLCWhaku023TrnxxVQcmhs3EXbKa2TxWu1+OHQ/X3jLSfXwimDFuU2UWyOOPTxtjtY/cn4JF8RKmQxvCPUTaEp04LimfKA0qoRZQWUdC/trsGuBHeAL9lEZpLyPcVOLV+LI597GhPxloUUOAfbKEWT/+ywL+9GeS5uYAgaL1CIjN1zck1GHC5LrBr87QRvy3brVn0/XZBhgWigGQC3B46qP9guaMnH9zqE/Nlj16PU5uUoLzmjDFD6ujRWLjOfDxh2T24PzRdlSCXbQAr+mAxifDCf7bAi2PqTc74x11b1sJo7BNIuay5txMWXPCg6kyzo4SSxFPOcj/+J+WYPrxg6NrzLcybBdlR8OoOPq6Cv9VdMow2hVTpO/mEZ/m5buN7tLQhhS3y2LyGxabrvAh2J8GxfgY46BkeDmSdjJBLKfNZcPNrBSZMdckkuKmrSJfWrtuSCoD0BT2QLzQWqyBZo3ky0i6hsnanY/o=
   app: mean
   domain: raphaellima
   on:
