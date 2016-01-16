@@ -21,13 +21,8 @@ module.exports = function(app){
 		}
 	});
 
-<<<<<<< HEAD
-	app.get('/auth/google/', passport.authorize('google', { scope: ['profile','email']}));
-	app.get('/auth/google/callback/', passport.authorize('google', 
-=======
 	app.get('/auth/google', passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.me']}));
 	app.get('/auth/google/callback/', passport.authenticate('google', 
->>>>>>> parent of fa08194... Teste
 		{
 			successRedirect: '/',
 			failureRedirect: '/login'
