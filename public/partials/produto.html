@@ -1,0 +1,38 @@
+<h1 class="text-center">Produto</h1>
+<p ng-show="mensagem.texto">{{mensagem.texto}}</p>
+<form ng-submit="salva()">
+	<div class="form-group">
+		<label for="nome">Nome do produto</label>
+		<input type="text" class="form-control" id="nome" name="nome" required ng-model="produto.nome">
+	</div>
+
+	<div class="form-group">
+		<label for="tipo">Tipo</label>
+			<input type="text" class="form-control" id="tipo" name="tipo" ng-model="produto.tipo" required>
+	</div>
+
+	<div class="form-group">
+		<label for="preco">Preço</label>
+			<input type="text" class="form-control" id="preco" name="preco" ng-model="produto.preco" required>
+	</div>
+
+	<div class="form-group">
+		<label for="nome">Descrição</label>
+		<input type="text" class="form-control" id="descricao" name="descricao" required ng-model="produto.descricao">
+	</div>
+
+	<div class="form-group">
+		<label for="nome">Sabor</label>
+		<input type="text" class="form-control" id="sabor" name="sabor" required ng-model="produto.sabor">
+	</div>
+
+	<div class="form-group">
+		<label for="nome">Quantidade</label>
+		<input type="number" class="form-control" id="quantidade" name="quantidade" required ng-model="produto.quantidade">
+	</div>
+
+	<div>
+		<button type="submit" class="btn btn-primary">Salvar</button>
+		<a id="botao-voltar" href="/" class="btn btn-default">Voltar</a>
+	</div>
+</form>

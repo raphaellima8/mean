@@ -16,5 +16,15 @@ angular.module('api', ['ngRoute', 'ngResource', 'meusComponentes'])
 			controller: 'ContatoController'
 		});
 
+		$routeProvider.when('/produtos', {
+			templateUrl: 'partials/produto.html',
+			controller: 'ProdutoController'
+		});
+
+		$routeProvider.when('/listar-produtos', {
+			templateUrl: 'partials/produtos.html',
+			controller: 'ProdutosController'
+		});
+
 		$routeProvider.otherwise({redirectTo: '/contatos'});
 	});

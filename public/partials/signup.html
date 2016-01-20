@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Criar uma conta</title>
+	<!-- build:css css/404.min.css -->
+	<link rel="stylesheet" href="../vendor/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="../vendor/bootstrap/dist/css/bootstrap-theme.css">
+	<!--endbuild-->
+</head>
+<body>
+	<div class="col-sm-6 col-sm-offset-3">
+		<h1><span class="fa fa-sign-in"></span>Signup</h1>
+		<form action="/usuarios" method="post">
+
+			<div class="form-group">
+				<label>Nome</label>
+				<input type="text" class="form-control" name="nome">
+			</div>
+			
+			<div class="form-group">
+				<label>Email</label>
+				<input type="email" class="form-control" name="email">
+			</div>
+
+			<div class="form-group">
+				<label>Senha</label>
+				<input type="password" class="form-control" name="senha">
+			</div>
+			
+			<div class="form-group">
+				<label>Endereço</label>
+				<input type="text" class="form-control" name="endereco">
+			</div>
+
+			<div class="form-group">
+				<label>Telefone</label>
+				<input type="phone" class="form-control" name="telefone">
+			</div>			
+			<button type="submit" class="btn btn-warning btn-lg">Cadastrar</button>
+		</form>
+
+	<hr>
+
+	<p><a href="/local/signin">Já possui uma conta?</a></p>
+
+	<p><a href="/">Página principal</a></p>
+
+	</div>
+</body>
+</html>

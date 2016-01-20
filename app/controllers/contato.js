@@ -25,11 +25,15 @@ module.exports = function(app){
     Contato.findById(_id).exec()
       .then(
         function(contato){
-          if(!contato) throw new Error("Contato não encontrado");
+          if(!contato){
+            res.json("Contato não encontrado");
+            res.end();
+          }
           res.json(contato);
         },
         function(erro){
           console.log(erro);
+          res.json("Contato não encontrado");
           res.status(404).json(erro);
         }
       );
