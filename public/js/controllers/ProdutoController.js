@@ -1,10 +1,10 @@
-angular.module('api').controller('ProdutoController', 
+angular.module('api').controller('ProdutoController',
 	function ($scope, Produto, $routeParams) {
-		if($routeParams.produtoId){
-			Produto.get({id: $routeParams.produtoId}, 
+		if($routeParams._id){
+			Produto.get({id: $routeParams._id},
 				function(produto){
 					$scope.produto = produto;
-				}, 
+				},
 				function(erro){
 					$scope.mensagem = {
 						texto: 'Não foi possível obter o produto.'
@@ -26,7 +26,7 @@ angular.module('api').controller('ProdutoController',
 				});
 		};
 
-		Produto.query(function(produto){
-			$scope.produtos = produto;
-		});	
+		Produto.query(function(produtos){
+			$scope.produtos = produtos;
+		});
 });

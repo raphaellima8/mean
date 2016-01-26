@@ -1,9 +1,9 @@
-angular.module('api').controller('ProdutosController', 
-	function ($scope, Produto) {
+angular.module('api').controller('ProdutosController',
+	function(Produto, $scope){
 
 		$scope.produtos = [];
 
-		$scope.filtro = '';
+		$scope.filtro = "";
 
 		$scope.mensagem = {texto: ""};
 
@@ -32,6 +32,5 @@ angular.module('api').controller('ProdutosController',
 					texto: 'Não foi possivel remover o produto'
 				};
 			});
-		};			
-	}
-);
+		};
+});

@@ -7,7 +7,7 @@ module.exports = function(app){
   	.get(produto.listaProdutos)
   	.post(produto.cadastrarProduto);
 
-  app.route('/produtos/:id')
+  app.route('/produtos/:id/')
   	.get(produto.obterProduto)
   	.delete(produto.removerProduto);
 }

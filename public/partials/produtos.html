@@ -3,7 +3,7 @@
 </div>
 <p ng-show="mensagem.texto">{{mensagem.texto}}</p>
 
-	<a ng-href="#/produtos" class="btn btn-primary">Novo produto</a>
+	<a ng-href="#/produto" class="btn btn-primary">Novo produto</a>
 
     <input ng-model="filtro" type="search" placeholder="parte do nome">
 	<hr>
@@ -26,7 +26,7 @@
 			</tr>
 			<tr ng-repeat="produto in produtos | filter: filtro">
 				<td>
-					<a ng-href="#/produtos/{{produto._id}}">{{produto.nome}}</a>
+					<a ng-href="#/produto/{{produto._id}}">{{produto.nome}}</a>
 				</td>
 				<td>
 					{{produto.tipo}}
@@ -36,7 +36,7 @@
 				<td>{{produto.descricao}}</td>
 				<td>{{produto.quantidade}}</td>
 				<td class="text-center">
-					<meu-botao-aviso nome="Remover" acao="remove(produto)"></meu-botao-aviso>
+					<button value="Remover" ng-click="remove(produto)" class="btn btn-warning">Remover</button>
 				</td>
 			</tr>
 		</table>

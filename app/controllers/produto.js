@@ -19,7 +19,7 @@
 	  		},
 
 	  		obterProduto: function(req, res){
-	  			var _id = sanitize(req.params.id);
+	  			var _id = sanitize(req.params.produtoId);
 	  			Produto.findById(_id).exec()
 	  				.then(
 	  					function(produto){
@@ -42,7 +42,7 @@
 	  				"sabor" : sanitize(req.body.sabor),
 	  				"quantidade" : sanitize(req.body.quantidade)
 	  			};
-	  			
+
 	  			Produto.create(dadosProduto)
 	  				.then(
 	  					function(produto){
@@ -57,17 +57,16 @@
 	  		},
 
 	  		removerProduto: function(req, res){
-	  			var _id = sanitize(req._id);
-	  			Produto.remove(_id).exec()
+	  			var _id = sanitize(req.params.id);
+	  			Produto.remove({"_id" : _id}).exec()
 	  				.then(
-	  					function(produto){
-	  						res.json("Excluído o produto ID: "+ _id);
-	  					},
-	  					function(erro){
-	  						res.json("ERRO AO EXCLUIR");
-	  						console.log('ERRO: ', erro);
+							function(){
+			          res.end();
+			        },
+			        function(erro){
+			          return console.error(erro);
 	  					}
-	  				);
+	  				)
 	  		}
 
 	  };

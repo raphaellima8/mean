@@ -17,13 +17,18 @@ angular.module('api', ['ngRoute', 'ngResource', 'meusComponentes'])
 		});
 
 		$routeProvider.when('/produtos', {
-			templateUrl: 'partials/produto.html',
-			controller: 'ProdutoController'
-		});
-
-		$routeProvider.when('/listar-produtos', {
 			templateUrl: 'partials/produtos.html',
 			controller: 'ProdutosController'
+		});
+
+		$routeProvider.when('/produto/:produtoId', {
+			templateUrl: 'partials/produto.html',
+			controller: 'ProdutoController'
+		})
+
+		$routeProvider.when('/produto', {
+			templateUrl: 'partials/produto.html',
+			controller: 'ProdutoController'
 		});
 
 		$routeProvider.otherwise({redirectTo: '/contatos'});
