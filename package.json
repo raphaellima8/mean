@@ -2,9 +2,9 @@
   "name": "mean",
   "version": "0.0.1",
   "description": "API MEAN",
-  "main": "server",
+  "main": "server.js",
   "scripts": {
-    "start": "node server"
+    "start": "node server.js"
   },
   "author": "Raphael Lima",
   "license": "GPL-3.0",
