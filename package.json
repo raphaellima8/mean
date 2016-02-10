@@ -4,7 +4,7 @@
   "description": "API MEAN",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server"
   },
   "author": "Raphael Lima",
   "license": "GPL-3.0",
