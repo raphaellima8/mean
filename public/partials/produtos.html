@@ -26,17 +26,18 @@
 			</tr>
 			<tr ng-repeat="produto in produtos | filter: filtro">
 				<td>
-					<a ng-href="#/produto/{{produto._id}}">{{produto.nome}}</a>
+					<a ng-href="#/produtos/details/{{produto._id}}">{{produto.nome}}</a>
 				</td>
 				<td>
 					{{produto.tipo}}
 				</td>
-				<td>{{produto.preco}}</td>
+				<td>{{produto.preco | currency: 'R$ '}}</td>
 				<td>{{produto.sabor}}</td>
 				<td>{{produto.descricao}}</td>
 				<td>{{produto.quantidade}}</td>
 				<td class="text-center">
-					<button value="Remover" ng-click="remove(produto)" class="btn btn-warning">Remover</button>
+					<button value="Remover" ng-click="remove(produto)" class="btn btn-danger">Excluir</button>
+					<a href="#/produto/edit/{{produto._id}}" class="btn btn-success">Editar</a>
 				</td>
 			</tr>
 		</table>

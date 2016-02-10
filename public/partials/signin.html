@@ -1,28 +1,16 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Entrar</title>
-	<!-- build:css css/404.min.css -->
-	<link rel="stylesheet" href="../vendor/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" href="../vendor/bootstrap/dist/css/bootstrap-theme.css">
-	<!--endbuild-->
-</head>
-<body>
 	<div class="col-sm-6 col-sm-offset-3">
 		<h1><span class="fa fa-sign-in"></span>Signin</h1>
-		<form action="/local/signin" method="post">
-			
+		<form ng-submit="logar(user)">
+
 			<div class="form-group">
 				<label>Email</label>
-				<input type="text" class="form-control" name="email">
+				<input type="email" class="form-control" name="email" ng-required="true" ng-model="user.email">
 			</div>
 
 			<div class="form-group">
 				<label>Senha</label>
-				<input type="text" class="form-control" name="password">
-			</div>			
+				<input type="password" class="form-control" name="password" ng-required="true" ng-model="user.password">
+			</div>
 			<button type="submit" class="btn btn-warning btn-lg">Acessar</button>
 		</form>
 
@@ -33,5 +21,3 @@
 	<p><a href="/">Página principal</a></p>
 
 	</div>
-</body>
-</html>

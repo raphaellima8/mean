@@ -13,11 +13,10 @@ exports.config = {
 	],
 	onPrepare: function(){
 		browser.driver.get('http://localhost:3000/login');
-		browser.driver.findElement(by.id('entrar-google')).click();
-		browser.driver.findElement(by.name('Email')).sendKeys(config.seleniumUser);
-		browser.driver.findElement(by.id('next')).click();
-		browser.driver.findElement(by.name('Passwd')).sendKeys(config.seleniumUserPassword);
-		browser.driver.findElement(by.name('signIn')).click();
+		browser.driver.findElement(by.id('entrar')).click();
+		browser.driver.findElement(by.id('login_field')).sendKeys(config.seleniumUser);
+		browser.driver.findElement(by.id('password')).sendKeys(config.seleniumUserPassword);
+		browser.driver.findElement(by.name('commit')).click();
 		//browser.driver.findElement(by.name('authorize')).click();
 	}
 };

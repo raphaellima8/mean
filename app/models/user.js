@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var findOrCreate = require('mongoose-findorcreate');
-var bcrypt = require('bcrypt');
+// var bcrypt = require('bcrypt');
 
 module.exports = function(){
 	var schema = mongoose.Schema({
@@ -29,9 +29,9 @@ module.exports = function(){
 		}
 	});
 
-	schema.methods.generateHash = function(senha){
-		return bcrypt.hashSync(senha, bcrypt.genSaltSync(8), null);
-	};
+	// schema.methods.generateHash = function(senha){
+	// 	return bcrypt.hashSync(senha, bcrypt.genSaltSync(8), null);
+	// };
 
 	schema.plugin(findOrCreate);
 	return mongoose.model('User', schema);

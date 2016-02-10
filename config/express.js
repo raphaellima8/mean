@@ -3,6 +3,7 @@ var passport = require('passport');
 //var home = require('./app/routes/home');
 var load = require('express-load');
 var bodyParser = require('body-parser');
+
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var helmet = require('helmet');
@@ -18,8 +19,10 @@ module.exports = function(){
 
   //Ativar middlewares
   app.use(express.static('./public'));
+
   app.use(bodyParser.urlencoded({extended: true}));
   app.use(bodyParser.json());
+  // app.use(expressValidator);
   app.use(require('method-override')());
 
   //Parser do header de cookies da requisição populando req.cookies e armazena ID da sesão

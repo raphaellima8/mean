@@ -10,4 +10,7 @@ module.exports = function(app){
   app.route('/produtos/:id/')
   	.get(produto.obterProduto)
   	.delete(produto.removerProduto);
+
+  app.route('/produtos/edit/:id')
+    .post(produto.atualizarProduto);
 }

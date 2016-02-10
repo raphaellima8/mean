@@ -20,6 +20,23 @@ module.exports = function(app){
 
   };
 
+  controller.findByName = function(req, res){
+      User.find({
+          email: sanitize(req.body.email),
+          senha: sanitize(req.body.senha)
+      }).exec()
+        .then(
+            function(user){
+                if(!user) throw new Error("Login e/ou senha inválidos");
+                res.json(true);
+            },
+            function(error){
+                console.log(error);
+                res.status(404).json(error);
+            }
+        );
+  };
+
   controller.obtemUsuario = function(req, res){
     var _id = req.params.id;
     User.findById(_id).exec()
