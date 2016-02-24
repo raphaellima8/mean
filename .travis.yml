@@ -35,7 +35,7 @@ deploy:
   user: raphael.aolima8@gmail.com
   password:
     secure: YScmTI6R1X+QeohlHEqesoDXVz8agpzwnsqOAWtcAtX7Gw+/aGAWQKxQpfhlpgkGMALR7wRgqqpCnPwJqUS5YMhhUb9RCQmW8K5ozJiuzELODtqWI+295f3+ZAkk+ufvep4NUSXyS+DQxjEJUIKNxpMVjGQ5fjSN/Z4WUsBfNGM77/JdA/7lSE/+OSzlzT3Trn2lAUKVLCWhaku023TrnxxVQcmhs3EXbKa2TxWu1+OHQ/X3jLSfXwimDFuU2UWyOOPTxtjtY/cn4JF8RKmQxvCPUTaEp04LimfKA0qoRZQWUdC/trsGuBHeAL9lEZpLyPcVOLV+LI597GhPxloUUOAfbKEWT/+ywL+9GeS5uYAgaL1CIjN1zck1GHC5LrBr87QRvy3brVn0/XZBhgWigGQC3B46qP9guaMnH9zqE/Nlj16PU5uUoLzmjDFD6ujRWLjOfDxh2T24PzRdlSCXbQAr+mAxifDCf7bAi2PqTc74x11b1sJo7BNIuay5txMWXPCg6kyzo4SSxFPOcj/+J+WYPrxg6NrzLcybBdlR8OoOPq6Cv9VdMow2hVTpO/mEZ/m5buN7tLQhhS3y2LyGxabrvAh2J8GxfgY46BkeDmSdjJBLKfNZcPNrBSZMdckkuKmrSJfWrtuSCoD0BT2QLzQWqyBZo3ky0i6hsnanY/o=
-  app: mean
+  app: nodemean
   domain: raphaellima
   on:
     repo: raphaellima8/mean
