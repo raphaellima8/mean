@@ -2,7 +2,7 @@ language: node_js
 notifications:
   email: raphael.aolima8@gmail.com
 node_js:
-- 0.10
+- 0.1
 services:
 - mongodb
 env:
@@ -32,10 +32,10 @@ script:
 - protractor config/protractor.js
 deploy:
   provider: openshift
-  user: raphael.aolima8@gmail.com
+  user: shd.contato@gmail.com
   password:
-    secure: YScmTI6R1X+QeohlHEqesoDXVz8agpzwnsqOAWtcAtX7Gw+/aGAWQKxQpfhlpgkGMALR7wRgqqpCnPwJqUS5YMhhUb9RCQmW8K5ozJiuzELODtqWI+295f3+ZAkk+ufvep4NUSXyS+DQxjEJUIKNxpMVjGQ5fjSN/Z4WUsBfNGM77/JdA/7lSE/+OSzlzT3Trn2lAUKVLCWhaku023TrnxxVQcmhs3EXbKa2TxWu1+OHQ/X3jLSfXwimDFuU2UWyOOPTxtjtY/cn4JF8RKmQxvCPUTaEp04LimfKA0qoRZQWUdC/trsGuBHeAL9lEZpLyPcVOLV+LI597GhPxloUUOAfbKEWT/+ywL+9GeS5uYAgaL1CIjN1zck1GHC5LrBr87QRvy3brVn0/XZBhgWigGQC3B46qP9guaMnH9zqE/Nlj16PU5uUoLzmjDFD6ujRWLjOfDxh2T24PzRdlSCXbQAr+mAxifDCf7bAi2PqTc74x11b1sJo7BNIuay5txMWXPCg6kyzo4SSxFPOcj/+J+WYPrxg6NrzLcybBdlR8OoOPq6Cv9VdMow2hVTpO/mEZ/m5buN7tLQhhS3y2LyGxabrvAh2J8GxfgY46BkeDmSdjJBLKfNZcPNrBSZMdckkuKmrSJfWrtuSCoD0BT2QLzQWqyBZo3ky0i6hsnanY/o=
+    secure: mT3flPGkP04r7VwUz+xAJ/ME3ymo31ZC7eVa67DTN1uqoUP6MO9uPcTSwKozFXWGMwXQdbf/e9a7WeHSvJadocDlui59Z8hirvzcowKdTVMmwUvezy1B9j3FaK5+67wX24flWfaapPKUfv4Pw/NcHHSp3t6qJIShhbcT3919EtmGEoWC2zF023BvnDeF0EOmG6vKxUunxkBLLIzf3oXxkuNFo1m6uFNLpBbG3EMbpxZB+1sG4U6mKSDzvzurcvMNZNU76+fC5MOK1tJ/utueP8rDSuDpaQlO9VK2NKGkBlzDeube2sJW3yXKG4yiNvSgEdt0fdoztXzo2lCdQEV83ubCpR4HbgYAKGaHUMFzCmhSpNjpD8wNervd19hB+3X2oUICSxq454PI9P9P7SHLMoU8b/nA4em5oC+q4c4p46Ux3qt37wNPbN7rx477VM6S3cwcDySUBj4LfFhx38pcgRPqILD39aTeNVmuRdIpa3oe7/HVSbLZqNlwdtoR/5EPq61gqPunHMcqAy8TT1Pspf6uMQvATgJH9b1gTqPpIoCQ+rRdSE+wy+Ce6RBz7fHIVl8Tdp+bxvjhZxZp3Uxp0gbmJM/nM4mQb2fgGF7oCyYiqqdwUsGuB2rKdgm++7T+tae6UOnGIIinT3OAen26m+OH4bIyezZr+TPV8sz7Vjk=
   app: nodemean
-  domain: raphaellima
+  domain: raphaellima8
   on:
     repo: raphaellima8/mean
