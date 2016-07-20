@@ -4,7 +4,6 @@
 <p ng-show="mensagem.texto">{{mensagem.texto}}</p>
 
 	<a ng-href="#/produto" class="btn btn-primary">Novo produto</a>
-
     <input ng-model="filtro" type="search" placeholder="parte do nome">
 	<hr>
 	<p ng-show="produtos.length">Produtos cadastrados: {{produtos.length}}</p>
@@ -37,6 +36,7 @@
 				<td>{{produto.quantidade}}</td>
 				<td class="text-center">
 					<button value="Remover" ng-click="remove(produto)" class="btn btn-danger">Excluir</button>
+					<md-button> Button </md-button>
 					<a href="#/produto/edit/{{produto._id}}" class="btn btn-success">Editar</a>
 				</td>
 			</tr>

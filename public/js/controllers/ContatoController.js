@@ -1,5 +1,5 @@
 angular.module('api').controller('ContatoController',
-	function($scope, Contato, $routeParams){	
+	function($scope, Contato, $routeParams){
 		if($routeParams.contatoId){
 			Contato.get({id: $routeParams.contatoId},
 				function(contato){
